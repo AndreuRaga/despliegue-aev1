@@ -41,9 +41,7 @@ if ($_SESSION['letras_acertadas'] == $_SESSION['palabra']) {
     header("Location: victoria.php");
     exit();
 } elseif ($_SESSION['vidas'] <= 0) {
-    echo "Lo siento, has perdido :( La palabra era: " . $_SESSION['palabra'] . "<br>";
-    session_destroy();
-    echo '<a href="">Jugar de nuevo</a>';
+    header("Location: derrota.php");
     exit();
 }
 ?>
